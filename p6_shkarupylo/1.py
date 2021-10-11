@@ -1,10 +1,10 @@
 a = input("Enter the first phrase ")
-b = input("Enter the second phrase ")
 fp = set()  # fp = first phrase
-sp = set()
 for i in a:
     if i.isalpha():
         fp.add(i.lower())
+b = input("Enter the second phrase ")
+sp = set()
 for i in b:
     if i.isalpha():
         sp.add(i.lower())
