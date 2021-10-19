@@ -1,6 +1,6 @@
 def hexadecimal(a):
     a = int(a)
-    hexa = [i for i in range(9)]
+    hexa = [i for i in range(10)]
     hexa += 'A', 'B', 'C', 'D', 'E', 'F'
     c = str(hexa[a // 16])
     c += str(hexa[a % 16])
@@ -16,7 +16,7 @@ def according(a):
     return False
 
 
-hexa_number = ''
+hexa_number = '#'
 entering = 'Enter the {} number which math to the interval [0;255]'
 for i in ('first', 'second', 'third'):
     while True:
@@ -24,4 +24,4 @@ for i in ('first', 'second', 'third'):
         if according(a):
             hexa_number += hexadecimal(a).zfill(2)
             break
-print(hexa_number)
+print('The hexa color: '+hexa_number)
