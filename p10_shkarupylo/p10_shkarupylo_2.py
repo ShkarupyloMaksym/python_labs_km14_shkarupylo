@@ -39,4 +39,4 @@ while True:
         break
     print('Incorrect enter')
 
-print(count_days(year, month, leap_year))
+print('Number of days in month:', count_days(year, month, leap_year))
