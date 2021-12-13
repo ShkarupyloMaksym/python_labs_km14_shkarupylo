@@ -1,17 +1,11 @@
-import time
-
-
 def deck():
     cards = ['A', *range(2, 10), 'J', 'Q', 'K']
-    for i in 'diamonds, clubs, hearts, spades'.split(', '):
+    suit = 'diamonds, clubs, hearts, spades'.split(', ')
+    for i in suit:
         for j in cards:
-            yield str(j)+' '+i
+            yield str(j) + ' ' + i
 
-param=deck()
-for i in param:
-    print(i)
 
-# StopIteration must be the last!
-time.sleep(0.1)
-
-next(param)
+param = deck()
+while param:
+    print(next(param))
