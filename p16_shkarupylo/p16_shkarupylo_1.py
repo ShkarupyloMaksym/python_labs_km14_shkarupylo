@@ -18,7 +18,7 @@ def copy_tuple(boolean):
     return wrap
 
 
-@copy_tuple(False)
+@copy_tuple(True)
 def copybook(number, n):
     """Function to return lists of pages
     - number - number of pages in book
