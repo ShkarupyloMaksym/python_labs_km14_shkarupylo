@@ -18,7 +18,7 @@ def copy_tuple(boolean):
     return wrap
 
 
-@copy_tuple(True)
+@copy_tuple(False)
 def copybook(number, n):
     """Function to return lists of pages
     - number - number of pages in book
@@ -55,8 +55,10 @@ while True:
         num = int(num)
         break
     print('This num can`t be, please try one more time.')
-print('Copybooks number = {}'.format(num//n))
+print('Copybooks number = {}'.format(num // n))
 for i in copybook(num, n):
-    for j in i:
-        print(j)
-# print(i for i in copybook(32, n))
+    if type(i[0]) == int:
+        print(i)
+    else:
+        for j in i:
+            print(j)
